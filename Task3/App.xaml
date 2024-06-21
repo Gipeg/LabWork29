@@ -1,0 +1,17 @@
+﻿<Application x:Class="Task3.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Task3"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="RequiredFieldLabelStyle" TargetType="Label">
+            <Setter Property="Visibility" Value="Hidden"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=LoginTextBox, Path=Text}" Value="">
+                    <Setter Property="Visibility" Value="Visible"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>

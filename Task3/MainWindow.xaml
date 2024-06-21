@@ -1,0 +1,17 @@
+﻿<Window x:Class="Task3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Task3"/>
+        <Label Content="Login" HorizontalAlignment="Center" FontSize="20"/>
+        <TextBox x:Name="LoginTextBox"/>
+        <Label Content="Поле обязательно для заполнения" Style="{StaticResource RequiredFieldLabelStyle}" />
+        <Label Content="Password" HorizontalAlignment="Center" FontSize="20"/>
+        <TextBox/>
+    </StackPanel>
+</Window>

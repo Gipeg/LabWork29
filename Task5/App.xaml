@@ -1,0 +1,22 @@
+﻿<Application x:Class="Task5.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Task5"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button" x:Key="registrationButtonStyle">
+            <Setter Property="Content" Value="Зарегестрироваться"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=AgreeCheckBox1, Path=IsChecked}" Value="False" />
+                        <Condition Binding="{Binding ElementName=AgreeCheckBox2, Path=IsChecked}" Value="False" />
+                    </MultiDataTrigger.Conditions>
+                    <MultiDataTrigger.Setters>
+                        <Setter Property="IsEnabled" Value="False" />
+                    </MultiDataTrigger.Setters>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>
